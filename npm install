@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Aladdin Web</title>
+</head>
+<body>
+  <h1>🧞 Aladdin Web - Online User</h1>
+  <ul id="users"></ul>
+
+  <script src="/socket.io/socket.io.js"></script>
+  <script>
+    const socket = io();
+    const userList = document.getElementById("users");
+
+    socket.on("updateUsers", (users) => {
+      userList.innerHTML = "";
+      users.forEach(user => {
+        const li = document.createElement("li");
+        li.textContent = "Online: " + user;
+        userList.appendChild(li);
+      });
+    });
+  </script>
+</body>
+</html>
