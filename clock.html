@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Digital Clock - Multiple Time Zones</title>
+    <link rel="stylesheet" href="clock-style.css">
+</head>
+<body>
+    <div class="clock-container">
+        <h1>🌍 Global Time Zones Clock</h1>
+        
+        <div class="controls">
+            <input type="text" id="searchInput" placeholder="🔍 Search time zone...">
+            <select id="themeSelect">
+                <option value="dark">🌙 Dark Mode</option>
+                <option value="light">☀️ Light Mode</option>
+                <option value="neon">⚡ Neon Mode</option>
+            </select>
+        </div>
+
+        <div class="clocks-grid" id="clocksGrid">
+            <!-- Clocks will be generated here by JavaScript -->
+        </div>
+
+        <div class="footer">
+            <p>Last updated: <span id="lastUpdate">--:--:--</span></p>
+        </div>
+    </div>
+
+    <script src="clock-script.js"></script>
+</body>
+</html>
